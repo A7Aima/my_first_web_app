@@ -7,8 +7,6 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
     AppComponent,
-    // ServerComponent,
-    // ServersComponent,
   ],
   imports: [
     BrowserModule,
