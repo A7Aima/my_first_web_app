@@ -20,7 +20,12 @@ export class ServerComponent {
   }
 
   onCreateServer(): void {
-    this.serverCreationStatus = "server is created";
+    if (this.serverName === "") {
+      this.serverCreationStatus = "server not created";
+    } else {
+
+      this.serverCreationStatus = "server is created " + this.serverName;
+    }
   }
 
   onUpdateServerName(event: Event) {
