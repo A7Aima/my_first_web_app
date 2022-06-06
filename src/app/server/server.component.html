@@ -1,5 +1,11 @@
-<p>server works!</p>
+<!-- Property Binding -->
+<!-- <button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button> -->
+<label for="">Server Name</label>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<p>{{serverName}}</p>
+<button class="btn btn-primary" (click)="onCreateServer()">Add Server</button>
+<p [innerText]="allowNewServer"></p>
+<p [innerText]="serverCreationStatus" (click)="serverCreationStatus= 'ok Server'"></p>
 <app-server-local></app-server-local>
-<br>
 <hr>
 <app-server-local></app-server-local>

@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './server-local.component.html',
   styleUrls: ['./server-local.component.css']
 })
-export class ServerLocalComponent implements OnInit {
+export class ServerLocalComponent {
+  serverId: number = 10;
+  serverStatus: string = "Offline"
 
-  constructor() { }
-
-  ngOnInit(): void {
+  getServerStatus(): string {
+    return this.serverStatus;
   }
-
 }
