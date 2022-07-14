@@ -12,6 +12,8 @@ export class ServerComponent {
   allowNewServer: boolean = false;
   serverCreationStatus: String = "server not created";
   serverName: string = "";
+  serverCreated: boolean = false;
+  serversList = ["Server 1", "Server 2"];
 
   constructor() {
     setTimeout(() => {
@@ -21,9 +23,17 @@ export class ServerComponent {
 
   onCreateServer(): void {
     if (this.serverName === "") {
+      this.serverCreated = false;
+      if (this.serversList !== []) {
+        this.serversList.pop();
+      }
       this.serverCreationStatus = "server not created";
     } else {
+      this.serverCreated = true;
+      if (!this.serversList.includes(this.serverName)) {
 
+        this.serversList.push(this.serverName);
+      }
       this.serverCreationStatus = "server is created " + this.serverName;
     }
   }

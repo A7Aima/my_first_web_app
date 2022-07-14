@@ -1,3 +1,5 @@
 <p>server-local works!</p>
 <!-- String interpolation -->
-<p>{{"server-local"}} with ID {{serverId}} is {{getServerStatus()}}</p>
+<!-- <p>{{"server-local"}} with ID {{serverId}} is {{getServerStatus()}}</p> -->
+<p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online: serverStatus=== 'Online'}">{{"server-local"}} with ID
+    {{serverId}} is {{getServerStatus()}}</p>
